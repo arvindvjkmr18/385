@@ -1,0 +1,18 @@
+module file_MUX(
+
+	// Input control
+	input logic INPUT_SEL,				// Control signal from system FSM
+	
+	// Input data
+	input logic [1:0] SPR_ADDR,		// Address input from sprite subsystem
+	
+	input logic [1:0] POS_ADDR,		// Address input from position subsystem
+	input logic [1:0] POS_ID,			// Sprite ID input from position subsystem
+	input logic [7:0]	POS_X,			// X coord input from position subsystem
+	input logic [7:0]	POS_Y,			// Y coord input from postion subsystem
+	input logic POS_WE,					// Write enable input from position subsystem
+
+	// Output data
+	output logic [1:0] MUX_ADDR		// Mux output to entity file
+	
+)

@@ -1,0 +1,30 @@
+
+State Machine - |system_toplevel|sprite_subsystem:spr_sub_sys|sprite_queue:sq|State
+Name State.RUN_ENGINE State.CHECK_FILE State.LOAD_ADDR State.HALT State.DONE 
+State.HALT 0 0 0 0 0 
+State.LOAD_ADDR 0 0 1 1 0 
+State.CHECK_FILE 0 1 0 1 0 
+State.RUN_ENGINE 1 0 0 1 0 
+State.DONE 0 0 0 1 1 
+
+State Machine - |system_toplevel|position_subsystem:pos_sub_sys|positionController:FSM|State
+Name State.DONE State.UPDATE_FILE State.STAGE_OUTPUT State.COLLISION_DETECT State.CALC_MOTION State.ENEMY_MOTION State.PLAYER_MOTION State.CHECK_FILE State.LOAD_ADDR State.HALT 
+State.HALT 0 0 0 0 0 0 0 0 0 0 
+State.LOAD_ADDR 0 0 0 0 0 0 0 0 1 1 
+State.CHECK_FILE 0 0 0 0 0 0 0 1 0 1 
+State.PLAYER_MOTION 0 0 0 0 0 0 1 0 0 1 
+State.ENEMY_MOTION 0 0 0 0 0 1 0 0 0 1 
+State.CALC_MOTION 0 0 0 0 1 0 0 0 0 1 
+State.COLLISION_DETECT 0 0 0 1 0 0 0 0 0 1 
+State.STAGE_OUTPUT 0 0 1 0 0 0 0 0 0 1 
+State.UPDATE_FILE 0 1 0 0 0 0 0 0 0 1 
+State.DONE 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |system_toplevel|systemController:FSM|State
+Name State.DRAW_YOU_WIN State.DRAW_GAME_OVER State.HOLD_FRAME State.DRAW_CHAR State.DRAW_ENV State.UPDATE_POS 
+State.UPDATE_POS 0 0 0 0 0 0 
+State.DRAW_ENV 0 0 0 0 1 1 
+State.DRAW_CHAR 0 0 0 1 0 1 
+State.HOLD_FRAME 0 0 1 0 0 1 
+State.DRAW_GAME_OVER 0 1 0 0 0 1 
+State.DRAW_YOU_WIN 1 0 0 0 0 1 

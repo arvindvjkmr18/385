@@ -1,0 +1,42 @@
+Info (10281): Verilog HDL Declaration information at game_over_engine.sv(19): object "SPRITE_X" differs only in case from object "sprite_x" in the same scope
+Info (10281): Verilog HDL Declaration information at game_over_engine.sv(20): object "SPRITE_Y" differs only in case from object "sprite_y" in the same scope
+Info (10281): Verilog HDL Declaration information at game_over_engine.sv(15): object "PIXEL_X" differs only in case from object "pixel_x" in the same scope
+Info (10281): Verilog HDL Declaration information at game_over_engine.sv(16): object "PIXEL_Y" differs only in case from object "pixel_y" in the same scope
+Info (10281): Verilog HDL Declaration information at positionController.sv(34): object "ADDRESS" differs only in case from object "address" in the same scope
+Info (10281): Verilog HDL Declaration information at positionController.sv(19): object "GAME_OVER" differs only in case from object "game_over" in the same scope
+Info (10281): Verilog HDL Declaration information at positionController.sv(20): object "YOU_WIN" differs only in case from object "you_win" in the same scope
+Info (10281): Verilog HDL Declaration information at detect_collision.sv(15): object "NEW_X" differs only in case from object "new_x" in the same scope
+Info (10281): Verilog HDL Declaration information at detect_collision.sv(16): object "NEW_Y" differs only in case from object "new_y" in the same scope
+Info (10281): Verilog HDL Declaration information at detect_collision.sv(19): object "OBJ_X" differs only in case from object "obj_x" in the same scope
+Info (10281): Verilog HDL Declaration information at detect_collision.sv(20): object "OBJ_Y" differs only in case from object "obj_y" in the same scope
+Info (10281): Verilog HDL Declaration information at ai_control_system.sv(12): object "PLAYER_X" differs only in case from object "player_x" in the same scope
+Info (10281): Verilog HDL Declaration information at ai_control_system.sv(13): object "PLAYER_Y" differs only in case from object "player_y" in the same scope
+Info (10281): Verilog HDL Declaration information at ai_control_system.sv(15): object "TARGET_X" differs only in case from object "target_x" in the same scope
+Info (10281): Verilog HDL Declaration information at ai_control_system.sv(16): object "TARGET_Y" differs only in case from object "target_y" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_subsystem.sv(20): object "QUEUE_DONE" differs only in case from object "queue_done" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_queue.sv(24): object "ADDRESS" differs only in case from object "address" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_engine.sv(15): object "TARGET_X" differs only in case from object "target_x" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_engine.sv(16): object "TARGET_Y" differs only in case from object "target_y" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_engine.sv(24): object "SPRITE_X" differs only in case from object "sprite_x" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_engine.sv(25): object "SPRITE_Y" differs only in case from object "sprite_y" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_engine.sv(20): object "PIXEL_X" differs only in case from object "pixel_x" in the same scope
+Info (10281): Verilog HDL Declaration information at sprite_engine.sv(21): object "PIXEL_Y" differs only in case from object "pixel_y" in the same scope
+Warning (10268): Verilog HDL information at keyboard.sv(47): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at keyboard.sv(11): object "press" differs only in case from object "Press" in the same scope
+Warning (10273): Verilog HDL warning at HexDriver.sv(23): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at get_keypress.sv(4): object "KEYCODE" differs only in case from object "keycode" in the same scope
+Info (10281): Verilog HDL Declaration information at frame_buffer.sv(42): object "PAGE_SEL" differs only in case from object "page_sel" in the same scope
+Info (10281): Verilog HDL Declaration information at env_engine.sv(19): object "SPRITE_X" differs only in case from object "sprite_x" in the same scope
+Info (10281): Verilog HDL Declaration information at env_engine.sv(20): object "SPRITE_Y" differs only in case from object "sprite_y" in the same scope
+Info (10281): Verilog HDL Declaration information at env_engine.sv(15): object "PIXEL_X" differs only in case from object "pixel_x" in the same scope
+Info (10281): Verilog HDL Declaration information at env_engine.sv(16): object "PIXEL_Y" differs only in case from object "pixel_y" in the same scope
+Warning (10273): Verilog HDL warning at entity_file.sv(75): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at entity_file.sv(76): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at entity_file.sv(77): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at entity_file.sv(123): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at entity_file.sv(124): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at entity_file.sv(125): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at you_win_engine.sv(19): object "SPRITE_X" differs only in case from object "sprite_x" in the same scope
+Info (10281): Verilog HDL Declaration information at you_win_engine.sv(20): object "SPRITE_Y" differs only in case from object "sprite_y" in the same scope
+Info (10281): Verilog HDL Declaration information at you_win_engine.sv(15): object "PIXEL_X" differs only in case from object "pixel_x" in the same scope
+Info (10281): Verilog HDL Declaration information at you_win_engine.sv(16): object "PIXEL_Y" differs only in case from object "pixel_y" in the same scope

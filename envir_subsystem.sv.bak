@@ -1,0 +1,52 @@
+module envir_subsystem(
+
+	// Timing signals
+	input logic				CLOCK_50,	// Master data clock
+	
+	// Input control
+	input logic				RESET_H,	// Reset signal
+	input logic				RUN_ENV,	// Command from system FSM
+	
+	// Output control
+	output logic			WE,			// Command to engine MUX input
+	output logic			ENV_DONE,	// Command to system FSM
+	
+	// Output data
+	output logic [7:0]		PIXEL_DOUT,	// Pixel data to engine MUX input
+	output logic [8:0]		PIXEL_X,	// Pixel x,y coord to engine MUX input
+	output logic [8:0]		PIXEL_Y,
+
+);
+
+	// Internal wires:
+	logic [7:0] e_data;
+	logic [8:0] eng_x, eng_y;
+	
+
+	env_engine envEngine(
+		.CLOCK_50,	
+		.RESET(RESET_H),	
+		.RUN_ENV,
+		.PIXEL_DIN(e_data),	
+		.PIXEL_DOUT(ENV_PIXEL_DIN),	
+		.PIXEL_X(ENV_PIXEL_X),		
+		.PIXEL_Y(ENV_PIXEL_Y),		
+		.SPRITE_ID(envir_id),	
+		.SPRITE_X(env_x),
+		.SPRITE_Y(env_y),
+		.ENV_DONE,
+		.WE(env_we),			
+		.RE(env_re)	
+	);
+	
+	envROM env(
+		.CLOCK_50, 
+		.RESET(RESET_H),
+		.R_ENV(env_re),
+		.SPRITE_ID(envir_id),	
+		.SPRITE_X(env_x),
+		.SPRITE_Y(env_y),
+		.SPRITE_PIXEL(e_data)
+	);
+
+endmodule

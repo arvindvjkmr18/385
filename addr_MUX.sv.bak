@@ -1,0 +1,25 @@
+module addr_MUX(
+
+	// Control signals:
+	input logic			SEL,
+	
+	// Input data:
+	input logic	[1:0]	ADDR_A,
+	input logic	[1:0]	ADDR_B,
+	
+	// Output data:
+	output logic [1:0] ADDR_OUT
+
+);
+
+	always_comb
+	begin
+
+		if(SEL)
+			ADDR_OUT = ADDR_B;
+		else
+			ADDR_OUT = ADDR_A;
+	
+	end
+
+endmodule

@@ -1,0 +1,15 @@
+
+State Machine - |system_toplevel|sprite_subsystem:spr_sub_sys|sprite_queue:sq|State
+Name State.RUN_ENGINE State.CHECK_FILE State.LOAD_ADDR State.HALT State.DONE 
+State.HALT 0 0 0 0 0 
+State.LOAD_ADDR 0 0 1 1 0 
+State.CHECK_FILE 0 1 0 1 0 
+State.RUN_ENGINE 1 0 0 1 0 
+State.DONE 0 0 0 1 1 
+
+State Machine - |system_toplevel|systemController:FSM|State
+Name State.HOLD_FRAME State.DRAW_CHAR State.DRAW_ENV State.UPDATE_POS 
+State.UPDATE_POS 0 0 0 0 
+State.DRAW_ENV 0 0 1 1 
+State.DRAW_CHAR 0 1 0 1 
+State.HOLD_FRAME 1 0 0 1 

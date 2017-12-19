@@ -1,0 +1,147 @@
+module testbench();
+
+timeunit 10ns;
+
+timeprecision 1ns;
+
+// Signals:
+
+	
+	// Input timing signals
+	logic				CLOCK_50;		// 50 MHz Master (Data) Clock	
+	
+	// Input control signals
+	logic				RESET;			// System reset
+	
+	// Output (to DAC via Pin-Planner)
+	logic				VGA_CLK;			// 25 MHz VGA (Video) Clock
+	logic				VGA_SYNC_N;
+	logic				VGA_BLANK_N;
+	logic 			VGA_HS;
+	logic				VGA_VS;
+	logic [7:0]		VGA_R;
+	logic [7:0]		VGA_G;
+	logic [7:0]		VGA_B;
+	
+always begin : CLOCK_GEN
+#1 CLOCK_50 = ~CLOCK_50;
+end
+
+initial begin: INITIALIZATION
+
+	CLOCK_50 = 1'b0;
+	RESET = 1'b1;
+	
+end
+
+queue_engine_toplevel dut(.*);
+
+	// Internal signals:
+	logic [7:0] mux_dout;	// 8' pixel data to frame buffer
+	logic [8:0] mux_x;		// Ref x coord (to frame buffer)
+	logic [8:0] mux_y;		// Ref y coord (to frame buffer)
+	logic mux_we;
+	
+
+	logic [1:0] State, Next_state;
+	logic fsm_env_done, fsm_spr_done, fsm_page_flip, fsm_run_env, fsm_run_spr, fsm_eng_sel;
+	
+	logic [2:0] spr_eng_state;
+	logic [7:0] spr_pixel_dout;
+	logic [8:0]	spr_x_out, spr_y_out;
+	logic spr_we_out;
+	
+	logic [1:0] spr_addr_file_to_queue;
+	logic [1:0] sprite_id_eng_to_rom;
+	logic [7:0] spr_pixel_rom_out;
+	
+	
+	// System internal signals
+	assign State = dut.FSM.State;
+	assign Next_state = dut.FSM.Next_state;
+	assign fsm_env_done = dut.FSM.ENV_DONE;
+	assign fsm_spr_done = dut.FSM.SPR_DONE;
+	assign fsm_page_flip = dut.FSM.PAGE_FLIP;
+	assign fsm_run_env = dut.FSM.RUN_ENV;
+	assign fsm_run_spr = dut.FSM.RUN_SPR;
+	assign fsm_eng_sel = dut.FSM.ENG_SEL;
+	
+	// Sprite subsys:
+	assign spr_eng_state = dut.spr_sub_sys.sq.State;
+	assign spr_addr_file_to_queue = dut.spr_sub_sys.sprite_id_file_to_queue;
+	assign sprite_id_eng_to_rom = dut.spr_sub_sys.sprite_id_engine_to_rom;
+	assign spr_pixel_rom_out = dut.spr_sub_sys.sprite_pixel_rom_to_engine;
+	assign spr_we_out = dut.spr_sub_sys.WE;
+	
+	
+	// Top level connections:
+	assign spr_pixel_dout = dut.SPR_PIXEL_DIN;
+	assign spr_x_out = dut.SPR_PIXEL_X;
+	assign spr_y_out = dut.SPR_PIXEL_Y;
+	
+	assign mux_dout = dut.p_data;
+	assign mux_x = dut.eng_x;
+	assign mux_y = dut.eng_y;
+	assign mux_we = dut.eng_we;
+	/*
+	logic [7:0] envir_rom_to_eng, sprite_rom_to_eng;
+	logic [7:0] frame_buf_PIXEL_DIN;
+	logic [8:0] x_write_to_buf, y_write_to_buf;
+	logic [7:0] page_0_PIXEL_DIN;
+	logic [7:0] page_1_PIXEL_DIN;
+	logic [1:0] page_1_QUAD_SEL;
+	logic [9:0] page_1_REF_X;
+	logic [9:0] page_1_REF_Y;
+	logic [14:0] page_1_ADDRESS;
+	logic page_1_WE_0, page_1_WE_1, page_1_WE_2, page_1_WE_3;
+	logic [7:0] buf_to_LUT;
+	logic [8:0] x_draw, y_draw;
+	//logic [7:0] p_data_int, // redundant to frame_buf_PIXEL_DIN
+	
+	logic env_we, spr_we, eng_we, env_re, spr_re;
+	logic [4:0] spr_x, spr_y;
+	//logic reset_h_int;
+	
+	assign State = dut.FSM.State;
+	assign Next_state = dut.FSM.Next_state;
+	assign frame_buf_PIXEL_DIN = dut.video.video_buf.PIXEL_DIN;
+	assign page_0_PIXEL_DIN = dut.video.video_buf.page_0.PIXEL_DIN;
+	assign page_1_PIXEL_DIN = dut.video.video_buf.page_1.PIXEL_DIN;
+	assign buf_to_LUT = dut.video.p_out;
+	//assign p_data_int = dut.p_data;
+	assign envir_rom_to_eng = dut.e_data;
+	assign sprite_rom_to_eng = dut.s_data;
+	assign x_write_to_buf = dut.eng_x;
+	assign y_write_to_buf = dut.eng_y;
+	assign env_we = dut.env_we;
+	assign spr_we = dut.spr_we;
+	assign eng_we = dut.eng_we;
+	assign env_re = dut.env_re;
+	assign spr_re = dut.spr_re;
+	//assign sprite_id_int = dut.sprite_id;
+	assign spr_x_int = dut.spr_x;
+	assign spr_y_int = dut.spr_y;
+	//assign reset_h_int = dut.reset_h;
+	assign x_draw = dut.video.x_out;
+	assign y_draw = dut.video.y_out;
+	
+	assign page_1_QUAD_SEL = dut.video.video_buf.page_1.QUAD_SEL;
+	assign page_1_REF_X = dut.video.video_buf.page_1.REF_X;
+	assign page_1_REF_Y = dut.video.video_buf.page_1.REF_Y;
+	assign page_1_ADDRESS = dut.video.video_buf.page_1.ADDRESS;
+	assign page_1_WE_0 = dut.video.video_buf.page_1.WE_0;
+	assign page_1_WE_1 = dut.video.video_buf.page_1.WE_1;
+	assign page_1_WE_2 = dut.video.video_buf.page_1.WE_2;
+	assign page_1_WE_3 = dut.video.video_buf.page_1.WE_3;
+	*/
+
+
+initial begin : TEST_VECTORS
+	
+	#1 RESET = 1'b0;
+
+	#1 RESET = 1'b1;
+	
+end
+
+endmodule

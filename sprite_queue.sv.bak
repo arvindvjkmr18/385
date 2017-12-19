@@ -1,0 +1,166 @@
+module sprite_queue(
+
+	// Timing signals:
+	input logic				CLOCK_50,	// 50 MHz master data clock
+
+	// Input control:
+	input logic				RESET_H,		// Reset command
+	input logic				RUN_QUEUE,	// Run command from FSM
+	input logic				ENG_DONE,	// Done command from engine
+	
+	input logic [2:0]		STOP_ADDRESS,
+	
+	// Input data:
+	input logic [1:0]		ID_CODE,		// Sprite ID code (character or envir tile)
+	input logic [8:0]		X_COORD,		// Target X anchor coord
+	input logic [8:0]		Y_COORD,		// Target Y anchor coord
+	
+	// Output control:
+	output logic			QUEUE_DONE,	// Done command to FSM
+	output logic			UPDATE,		// Load/refresh command to engine
+	output logic			RUN_ENG,		// Run the draw engine
+	
+	// Output data:
+	output logic [1:0]	ADDRESS,		// Address of sprite info in entity reg file
+	output logic [1:0]	SPRITE_ID,	// Sprite ID code pass-thru to engine
+	output logic [8:0]	TARGET_X,	// Target X pass-thru to engine
+	output logic [8:0]	TARGET_Y		// Target Y pass-thru to engine
+	
+);
+
+	enum logic [2:0]
+	{
+	
+		HALT,				// State 0
+		LOAD_ADDR,		// State 1
+		CHECK_FILE,		// State 2
+		RUN_ENGINE,		// State 3
+		DONE				// State 4
+	
+	}	State, Next_state;
+
+	// Internal wires & registers:
+	logic [2:0] address, next_address;
+	
+	// Other port assignments:
+	assign ADDRESS = address[1:0];
+	assign SPRITE_ID = ID_CODE;
+	assign TARGET_X = X_COORD;
+	assign TARGET_Y = Y_COORD;
+	
+	
+	// Update state
+	always_ff @ (posedge CLOCK_50)
+	begin
+	
+		if(RESET_H)
+			State <= HALT;
+		else
+			State <= Next_state;
+	
+	end
+	
+	// Update address look-up
+	always_ff @ (posedge CLOCK_50)
+	begin
+	
+		if(RESET_H)
+			address <= 3'b000;
+		else
+			address <= next_address;
+	
+	end
+	
+	// Next State Control:
+	always_comb
+	begin
+	
+		Next_state = State;
+		
+		unique case (State)
+		
+			HALT:
+			begin
+				if(RUN_QUEUE)
+					Next_state = LOAD_ADDR;
+			end		
+			
+			LOAD_ADDR:
+				
+					Next_state = CHECK_FILE;
+					
+			CHECK_FILE:
+			begin
+			
+				if(ID_CODE == 2'b11)
+					Next_state = LOAD_ADDR;		// Skip opcode at this address
+					
+				else if(address == STOP_ADDRESS)
+					Next_state = DONE;
+					
+				else
+					Next_state = RUN_ENGINE;	// Tell engine to update its target
+
+					
+			end
+					
+			RUN_ENGINE:
+			begin
+				if(ENG_DONE)
+					Next_state = LOAD_ADDR;		// Load next sprite addr
+			end		
+					
+			DONE:
+			
+				Next_state = HALT;
+	
+		endcase
+	
+	end
+	
+	// Command signals:
+	always_comb
+	begin
+	
+		// Default commands
+		QUEUE_DONE	= 1'b0;
+		UPDATE		= 1'b0;
+		RUN_ENG		= 1'b0;
+	
+		unique case (State)
+		
+			HALT: ;
+			
+			LOAD_ADDR: ;		// Load-time allowance from reg file
+			
+			CHECK_FILE:	
+			
+				UPDATE = 1'b1;	// Set initial x,y in engine
+				
+			RUN_ENGINE:
+			
+				RUN_ENG = 1'b1;
+				
+			DONE:
+			
+				QUEUE_DONE = 1'b1;
+			
+		
+		endcase
+	
+	end
+
+	// Next Address Calculation:
+	always_comb
+	begin
+		
+		if(ENG_DONE || ID_CODE == 2'b11)
+			next_address = address + 1;
+		else if(State == DONE)
+			next_address = 3'b000;
+		else
+			next_address = address;
+	
+	end
+	
+endmodule

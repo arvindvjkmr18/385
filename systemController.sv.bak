@@ -1,0 +1,110 @@
+module systemController(
+
+	// Input timing signals
+	input logic 	CLOCK_50,
+
+	// Input control signals:
+	input logic 	RESET,
+	input logic		POS_UPDATE_DONE,
+	input logic  	ENV_DONE,
+	input logic		SPR_DONE,
+	input logic  	PAGE_FLIP,
+	
+	// Output control signals:
+
+	output logic	RUN_POS_UPDATE,
+	output logic 	RUN_ENV,
+	output logic 	RUN_SPR,
+	output logic   ENG_SEL
+);
+
+	enum logic [1:0]
+	{
+	
+		UPDATE_POS,		// State 0
+		DRAW_ENV,		// State 1
+		DRAW_CHAR,		// State 2
+		HOLD_FRAME		// State 3
+	
+	}	State, Next_state;
+	
+	always_ff @ (posedge CLOCK_50)
+	begin
+	
+		if (RESET)
+			State <= UPDATE_POS;
+		else
+			State <= Next_state;
+	
+	end
+	
+		
+	// Next State Control:
+	always_comb
+	begin
+
+		// Default next state:
+		Next_state = State;
+		
+		unique case (State)
+		
+			UPDATE_POS:
+			
+				if(POS_UPDATE_DONE)
+					Next_state = DRAW_ENV;
+			
+			DRAW_ENV:
+			
+				if(ENV_DONE)
+					Next_state = DRAW_CHAR;
+				
+			DRAW_CHAR:
+			
+				if(SPR_DONE)
+					Next_state = HOLD_FRAME;
+					
+			HOLD_FRAME:
+			
+				if(PAGE_FLIP)
+					Next_state = UPDATE_POS;
+					
+			default : ;
+			
+		endcase
+	
+	end
+	
+	//Assign control signals based on current state:
+	always_comb
+	begin
+	
+		//default control signal outputs:
+		
+		RUN_POS_UPDATE = 1'b0;
+		RUN_ENV = 1'b0;
+		RUN_SPR = 1'b0;
+		ENG_SEL = 1'b0;
+		
+		unique case (State)
+		
+			UPDATE_POS: 
+				RUN_POS_UPDATE = 1;
+				
+			DRAW_ENV:
+				RUN_ENV = 1;
+							
+			DRAW_CHAR:
+			begin
+				RUN_SPR = 1;
+				ENG_SEL = 1;
+			end
+			
+			HOLD_FRAME: ;
+					
+			default : ;
+			
+		endcase
+	
+	end
+	
+endmodule

@@ -1,0 +1,77 @@
+module user_control_system(
+
+	// Input timing signals:
+	input logic			CLOCK_50,
+	input logic			PS2_CLK,
+	input logic 		RESET_H,
+	
+	// Input control signals:
+	input logic			GET_INPUT,		// From system core FSM
+	
+	// Input data
+	input logic 		PS2_DAT,				// From PS2 keyboard
+	input logic [8:0]	CURR_POS_X,			// Hero x,y from entity file
+	input logic [8:0]	CURR_POS_Y,
+	
+	// Output data
+	output logic [8:0] HERO_NEW_X,		// New x,y position to entity file
+	output logic [8:0] HERO_NEW_Y,
+
+	// For visual keyboard input verification
+	output logic [6:0]	HEX0, HEX1
+
+
+);
+
+	// Internal wires & registers
+	logic [7:0] keycode;
+	logic [2:0] user_input;
+	logic [8:0] next_x, next_y;
+	
+
+	kbPS2 HID(
+	
+		.CLOCK_50,
+		.PS2_CLK,
+		.PS2_DAT,
+		.RESET_H,
+		.KEYCODE(keycode),
+		.HEX0, 
+		.HEX1
+	
+	);
+	
+	get_keypress capture_routine(
+	
+		.CLOCK_50,
+		.KEYCODE(keycode),
+		.GET_INPUT,
+		.USER_INPUT(user_input)
+	
+	);
+	
+	motion motion_comp(
+	
+	 .USER_INPUT(user_input),
+	 .current_pos_x(CURR_POS_X),
+	 .current_pos_y(CURR_POS_Y),
+	 .next_pos_x(HERO_NEW_X),
+	 .next_pos_y(HERO_NEW_Y),
+	
+	);
+	
+	/*
+	detect_collision dc_comp(
+	
+	 .USER_INPUT(user_input),
+	 .next_pos_x(next_x),
+	 .next_pos_y(next_y),
+	 .actual_pos_x(HERO_NEW_X),
+	 .actual_pos_y(HERO_NEW_Y)
+	
+	);
+	*/
+
+
+
+endmodule

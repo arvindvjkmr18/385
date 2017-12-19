@@ -1,0 +1,139 @@
+module system_toplevel(
+
+	input 				CLOCK_50,
+	input 				RESET,
+	input 				PS2_CLK,
+	input 				PS2_DAT,		
+	
+	// Output to VGA:
+	output logic		VGA_CLK,
+	output logic		VGA_SYNC_N,
+	output logic		VGA_BLANK_N,
+	output logic		VGA_HS,
+	output logic		VGA_VS,
+	output logic [7:0]	VGA_R,
+	output logic [7:0]	VGA_G,
+	output logic [7:0]	VGA_B,
+	
+	output logic [6:0]	HEX0, HEX1
+
+);
+
+	//Internal wires
+	logic reset_h;
+	logic spr_we, env_we, eng_we;
+	
+	assign reset_h = ~RESET;
+	
+	systemController FSM(
+		.CLOCK_50,
+		.RESET(reset_h),
+		.ENV_DONE,
+		.SPR_DONE(spr_queue_done),
+		.PAGE_FLIP,
+		.RUN_ENV,
+		.RUN_SPR,
+		.ENG_SEL
+	);
+	
+	detectPageFlip dfp(
+		.CLOCK_50,
+		.PAGE_SEL,
+		.PAGE_FLIP
+	);
+	
+	video_comp video(
+	
+		.CLOCK_50,		// 50 MHz Master (Data) Clock
+	
+		.RESET,			// System reset
+	
+		.PIXEL_DIN(p_data),		// Input pixel from sprite engines
+		.PIXEL_X(eng_x),			// Range: 0 to 319
+		.PIXEL_Y(eng_y),			// Range: 0 to 239
+		.WE(eng_we),				// Write-Enable command from sprite engines
+	
+		// Output (to DAC via Pin-Planner)
+		.VGA_CLK,			// 25 MHz VGA (Video) Clock
+		.VGA_SYNC_N,
+		.VGA_BLANK_N,
+		.VGA_HS,
+		.VGA_VS,
+		.VGA_R,
+		.VGA_G,
+		.VGA_B,
+		.PAGE_SEL
+	);
+	
+	engine_MUX engine(
+
+		.ENG_SEL,
+		.ENV_PIXEL_DIN,	
+		.ENV_PIXEL_X,		
+		.ENV_PIXEL_Y,
+		.ENV_WE(env_we), 
+		.SPR_PIXEL_DIN,		
+		.SPR_PIXEL_X,		
+		.SPR_PIXEL_Y,
+		.SPR_WE(spr_we),
+		.ENG_PIXEL_DOUT(p_data),	
+		.ENG_PIXEL_X(eng_x),	
+		.ENG_PIXEL_Y(eng_y),
+		.ENG_WE(eng_we)
+	);
+	
+	sprite_subsystem spr_sub_sys(
+	
+		.CLOCK_50,
+		.RESET_H(reset_h),
+		.RUN(RUN_SPR),
+		//.target_x_file_out,
+		//.target_y_file_out,
+		.sprite_id_file_to_queue,
+		.STOP_ADDRESS(stop_addr),
+		.PIXEL_DOUT(SPR_PIXEL_DIN),
+		.PIXEL_X(SPR_PIXEL_X),		// Ref x coord (to frame buffer)
+		.PIXEL_Y(SPR_PIXEL_Y),
+		.ADDRESS(address),
+		.WE(spr_we), 
+		.QUEUE_DONE(spr_queue_done)
+	
+	);
+	
+	module envir_subsystem(
+
+		.CLOCK_50,	// Master data clock
+		.RESET_H(reset_h),	// Reset signal
+		.RUN_ENV,	// Command from system FSM
+		.WE(env_we),			// Command to engine MUX input
+		.ENV_DONE,	// Command to system FSM
+		.PIXEL_DOUT(ENV_PIXEL_DIN),	// Pixel data to engine MUX input
+		.PIXEL_X(ENV_PIXEL_X),	// Pixel x,y coord to engine MUX input
+		.PIXEL_Y(ENV_PIXEL_Y,
+
+	);
+	
+	entity_file ef(
+	
+		//timing:
+		.CLOCK_50,
+		.RESET_H(reset_h),
+	
+		//Generic ROM inputs:
+		.ADDRESS(address),
+		.SPRITE_ID_reg(),
+		.TARGET_X_reg,	
+		.TARGET_Y_reg,
+		.RE_reg(1),
+		.WE_reg(0),
+
+		.SPRITE_ID(sprite_id_file_to_queue),
+		.TARGET_X(target_x_file_out),
+		.TARGET_Y(target_y_file_out),
+		.STOP_ADDRESS(stop_addr)
+	
+	);
+
+
+
+endmodule

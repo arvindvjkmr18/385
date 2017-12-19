@@ -1,0 +1,537 @@
+# Reading C:/altera/15.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do final_proj_v1_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim PE vmap 10.3d Lib Mapping Utility 2014.10 Oct  7 2014
+# vmap -modelsim_quiet work rtl_work 
+# Copying C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/vram.v}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:19 on Dec 12,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/vram.v 
+# -- Compiling module vram
+# 
+# Top level modules:
+# 	vram
+# End time: 16:47:19 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_engine.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:19 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_engine.sv 
+# -- Compiling module game_over_engine
+# 
+# Top level modules:
+# 	game_over_engine
+# End time: 16:47:19 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/position_buffer.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:19 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/position_buffer.sv 
+# -- Compiling module position_buffer
+# 
+# Top level modules:
+# 	position_buffer
+# End time: 16:47:19 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/positionController.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:19 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/positionController.sv 
+# -- Compiling module positionController
+# 
+# Top level modules:
+# 	positionController
+# End time: 16:47:19 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/opcode_MUX.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:19 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/opcode_MUX.sv 
+# -- Compiling module opcode_MUX
+# 
+# Top level modules:
+# 	opcode_MUX
+# End time: 16:47:19 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/detect_collision.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:19 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/detect_collision.sv 
+# -- Compiling module detect_collision
+# 
+# Top level modules:
+# 	detect_collision
+# End time: 16:47:19 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/ai_control_system.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:20 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/ai_control_system.sv 
+# -- Compiling module ai_control_system
+# 
+# Top level modules:
+# 	ai_control_system
+# End time: 16:47:20 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/addr_MUX.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:20 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/addr_MUX.sv 
+# -- Compiling module addr_MUX
+# 
+# Top level modules:
+# 	addr_MUX
+# End time: 16:47:20 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/motion.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:20 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/motion.sv 
+# -- Compiling module motion
+# 
+# Top level modules:
+# 	motion
+# End time: 16:47:20 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/VGA_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:20 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/VGA_controller.sv 
+# -- Compiling module VGA_controller
+# 
+# Top level modules:
+# 	VGA_controller
+# End time: 16:47:20 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/vga_clk_generator.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:20 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/vga_clk_generator.sv 
+# -- Compiling module vga_clk_generator
+# 
+# Top level modules:
+# 	vga_clk_generator
+# End time: 16:47:20 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/upscaler.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:20 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/upscaler.sv 
+# -- Compiling module upscaler
+# 
+# Top level modules:
+# 	upscaler
+# End time: 16:47:21 on Dec 12,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/systemController.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:21 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/systemController.sv 
+# -- Compiling module systemController
+# 
+# Top level modules:
+# 	systemController
+# End time: 16:47:21 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_queue.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:21 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_queue.sv 
+# -- Compiling module sprite_queue
+# 
+# Top level modules:
+# 	sprite_queue
+# End time: 16:47:21 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_engine.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:21 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_engine.sv 
+# -- Compiling module sprite_engine
+# 
+# Top level modules:
+# 	sprite_engine
+# End time: 16:47:21 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/palette_LUT.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:21 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/palette_LUT.sv 
+# -- Compiling module palette_LUT
+# 
+# Top level modules:
+# 	palette_LUT
+# End time: 16:47:21 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/page_controller.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:21 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/page_controller.sv 
+# -- Compiling module page_controller
+# 
+# Top level modules:
+# 	page_controller
+# End time: 16:47:22 on Dec 12,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/kbPS2.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:22 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/kbPS2.sv 
+# -- Compiling module kbPS2
+# 
+# Top level modules:
+# 	kbPS2
+# End time: 16:47:22 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/HexDriver.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:22 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 16:47:22 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/get_keypress.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:22 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/get_keypress.sv 
+# -- Compiling module get_keypress
+# 
+# Top level modules:
+# 	get_keypress
+# End time: 16:47:22 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/frame_buffer.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:22 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/frame_buffer.sv 
+# -- Compiling module frame_buffer
+# -- Compiling module buffer_page
+# ** Warning: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/frame_buffer.sv(216): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	frame_buffer
+# End time: 16:47:22 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/env_engine.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:22 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/env_engine.sv 
+# -- Compiling module env_engine
+# 
+# Top level modules:
+# 	env_engine
+# End time: 16:47:23 on Dec 12,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/entity_file.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:23 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/entity_file.sv 
+# -- Compiling module entity_file
+# 
+# Top level modules:
+# 	entity_file
+# End time: 16:47:23 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/engine_MUX.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:23 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/engine_MUX.sv 
+# -- Compiling module engine_MUX
+# ** Warning: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/engine_MUX.sv(68): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	engine_MUX
+# End time: 16:47:23 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/Dreg.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:23 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/Dreg.sv 
+# -- Compiling module Dreg
+# 
+# Top level modules:
+# 	Dreg
+# End time: 16:47:23 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/detectPageFlip.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:23 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/detectPageFlip.sv 
+# -- Compiling module detectPageFlip
+# 
+# Top level modules:
+# 	detectPageFlip
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/11_reg.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/11_reg.sv 
+# -- Compiling module reg_11
+# 
+# Top level modules:
+# 	reg_11
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/file_MUX.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/file_MUX.sv 
+# -- Compiling module file_MUX
+# 
+# Top level modules:
+# 	file_MUX
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/gameoverROM.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/gameoverROM.sv 
+# -- Compiling module gameoverROM
+# 
+# Top level modules:
+# 	gameoverROM
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/user_control_system.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/user_control_system.sv 
+# -- Compiling module user_control_system
+# 
+# Top level modules:
+# 	user_control_system
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/video_comp.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/video_comp.sv 
+# -- Compiling module video_comp
+# 
+# Top level modules:
+# 	video_comp
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/spriteROM.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/spriteROM.sv 
+# -- Compiling module spriteROM
+# 
+# Top level modules:
+# 	spriteROM
+# End time: 16:47:24 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/keyboard.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:24 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/keyboard.sv 
+# -- Compiling module keyboard
+# 
+# Top level modules:
+# 	keyboard
+# End time: 16:47:25 on Dec 12,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envROM.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:25 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envROM.sv 
+# -- Compiling module envROM
+# 
+# Top level modules:
+# 	envROM
+# End time: 16:47:25 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_subsystem.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:25 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_subsystem.sv 
+# -- Compiling module game_over_subsystem
+# 
+# Top level modules:
+# 	game_over_subsystem
+# End time: 16:47:25 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/position_subsystem.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:25 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/position_subsystem.sv 
+# -- Compiling module position_subsystem
+# 
+# Top level modules:
+# 	position_subsystem
+# End time: 16:47:25 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_subsystem.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:25 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_subsystem.sv 
+# -- Compiling module sprite_subsystem
+# 
+# Top level modules:
+# 	sprite_subsystem
+# End time: 16:47:25 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envir_subsystem.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:25 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envir_subsystem.sv 
+# -- Compiling module envir_subsystem
+# 
+# Top level modules:
+# 	envir_subsystem
+# End time: 16:47:25 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/system_toplevel.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:25 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/system_toplevel.sv 
+# -- Compiling module system_toplevel
+# 
+# Top level modules:
+# 	system_toplevel
+# End time: 16:47:26 on Dec 12,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2 {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/testbench.sv}
+# Model Technology ModelSim ALTERA vlog 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 16:47:26 on Dec 12,2017
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2" C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 16:47:26 on Dec 12,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -gui "+altera" -l msim_transcript -do "final_proj_v1_run_msim_rtl_verilog.do" 
+# Start time: 16:47:26 on Dec 12,2017
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.system_toplevel
+# Loading work.systemController
+# Loading work.detectPageFlip
+# Loading work.video_comp
+# Loading work.vga_clk_generator
+# Loading work.VGA_controller
+# Loading work.palette_LUT
+# Loading work.page_controller
+# Loading work.upscaler
+# Loading work.frame_buffer
+# Loading work.buffer_page
+# Loading work.vram
+# Loading altera_mf_ver.altsyncram
+# Loading work.engine_MUX
+# Loading work.position_subsystem
+# Loading work.positionController
+# Loading work.addr_MUX
+# Loading work.opcode_MUX
+# Loading work.position_buffer
+# Loading work.user_control_system
+# Loading work.kbPS2
+# Loading work.keyboard
+# Loading work.Dreg
+# Loading work.reg_11
+# Loading work.get_keypress
+# Loading work.HexDriver
+# Loading work.motion
+# Loading work.ai_control_system
+# Loading work.detect_collision
+# Loading work.sprite_subsystem
+# Loading work.sprite_queue
+# Loading work.sprite_engine
+# Loading work.spriteROM
+# Loading work.envir_subsystem
+# Loading work.env_engine
+# Loading work.envROM
+# Loading work.game_over_subsystem
+# Loading work.game_over_engine
+# Loading work.gameoverROM
+# Loading work.file_MUX
+# Loading work.entity_file
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/system_toplevel.sv(54): [PCDPC] - Port size (2) does not match connection size (1) for port 'ENG_SEL'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/systemController.sv(21).
+# 
+#         Region: /testbench/dut/FSM
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/system_toplevel.sv(99): [PCDPC] - Port size (2) does not match connection size (1) for port 'ENG_SEL'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/engine_MUX.sv(4).
+# 
+#         Region: /testbench/dut/engine
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/get_keypress.sv(71): [PCDPC] - Port size (4) does not match connection size (3) for port 'In0'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/HexDriver.sv(1).
+# 
+#         Region: /testbench/dut/pos_sub_sys/player/capture_routine/hex_inst_0
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envir_subsystem.sv(31): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_X'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/env_engine.sv(19).
+# 
+#         Region: /testbench/dut/envir_sub_sys/envEngine
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envir_subsystem.sv(31): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_Y'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/env_engine.sv(20).
+# 
+#         Region: /testbench/dut/envir_sub_sys/envEngine
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envir_subsystem.sv(47): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_X'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envROM.sv(12).
+# 
+#         Region: /testbench/dut/envir_sub_sys/env
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envir_subsystem.sv(47): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_Y'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/envROM.sv(13).
+# 
+#         Region: /testbench/dut/envir_sub_sys/env
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_subsystem.sv(33): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_X'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_engine.sv(19).
+# 
+#         Region: /testbench/dut/game_over_sub_sys/gameoverEngine
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_subsystem.sv(33): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_Y'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_engine.sv(20).
+# 
+#         Region: /testbench/dut/game_over_sub_sys/gameoverEngine
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_subsystem.sv(49): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_X'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/gameoverROM.sv(12).
+# 
+#         Region: /testbench/dut/game_over_sub_sys/gameover
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/game_over_subsystem.sv(49): [PCDPC] - Port size (5) does not match connection size (9) for port 'SPRITE_Y'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/gameoverROM.sv(13).
+# 
+#         Region: /testbench/dut/game_over_sub_sys/gameover
+# ** Warning: (vsim-3015) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/system_toplevel.sv(211): [PCDPC] - Port size (1) does not match connection size (32) for port 'RE_reg'. The port definition is at: C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/entity_file.sv(12).
+# 
+#         Region: /testbench/dut/entityFile
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: ndfil  Hostname: LAPTOP-9TAMKKMQ  ProcessID: 16192
+# 
+#           Attempting to use alternate WLF file "./wlftx6w1wi".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftx6w1wi
+# 
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 70 ms
+# ** Warning: (vsim-8315) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_queue.sv(130): No condition is true in the unique/priority if/case statement.
+# 
+# ** Warning: (vsim-8315) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_queue.sv(80): No condition is true in the unique/priority if/case statement.
+# 
+# ** Warning: (vsim-8315) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/positionController.sv(209): No condition is true in the unique/priority if/case statement.
+# 
+# ** Warning: (vsim-8315) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/positionController.sv(102): No condition is true in the unique/priority if/case statement.
+# 
+# ** Warning: (vsim-8315) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/positionController.sv(102): No condition is true in the unique/priority if/case statement.
+# 
+# ** Warning: (vsim-8315) C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v2/sprite_queue.sv(80): No condition is true in the unique/priority if/case statement.
+# 
+# End time: 17:01:34 on Dec 12,2017, Elapsed time: 0:14:08
+# Errors: 0, Warnings: 20

@@ -1,0 +1,52 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/vram.v}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/position_buffer.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/positionController.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/opcode_MUX.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/detect_collision.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/ai_control_system.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/addr_MUX.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/motion.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/VGA_controller.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/vga_clk_generator.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/upscaler.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/systemController.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/sprite_queue.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/sprite_engine.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/palette_LUT.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/page_controller.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/kbPS2.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/HexDriver.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/get_keypress.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/frame_buffer.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/env_engine.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/entity_file.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/engine_MUX.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/Dreg.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/detectPageFlip.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/11_reg.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/file_MUX.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/user_control_system.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/video_comp.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/spriteROM.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/keyboard.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/envROM.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/position_subsystem.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/sprite_subsystem.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/envir_subsystem.sv}
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/system_toplevel.sv}
+
+vlog -sv -work work +incdir+C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b {C:/Users/ndfil/Documents/ECE385/Final_Project/final_proj_v1b/testbench.sv}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+
+add wave *
+view structure
+view signals
+run 70 ms

@@ -1,0 +1,137 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -15.856
+TNS   : -16648.854
+
+Type  : Slow 1200mV 85C Model Setup 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -4.238
+TNS   : -482.939
+
+Type  : Slow 1200mV 85C Model Setup 'PS2_CLK'
+Slack : -0.071
+TNS   : -0.263
+
+Type  : Slow 1200mV 85C Model Hold 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'PS2_CLK'
+Slack : 0.463
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -0.351
+TNS   : -3.144
+
+Type  : Slow 1200mV 85C Model Removal 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.329
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -3469.952
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'PS2_CLK'
+Slack : -3.000
+TNS   : -28.700
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -2.693
+TNS   : -726.673
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -14.403
+TNS   : -15092.118
+
+Type  : Slow 1200mV 0C Model Setup 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -3.774
+TNS   : -413.166
+
+Type  : Slow 1200mV 0C Model Setup 'PS2_CLK'
+Slack : 0.039
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.143
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.338
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'PS2_CLK'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -0.217
+TNS   : -1.414
+
+Type  : Slow 1200mV 0C Model Removal 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.308
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -3424.896
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'PS2_CLK'
+Slack : -3.000
+TNS   : -28.700
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -2.649
+TNS   : -715.409
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -7.183
+TNS   : -7579.944
+
+Type  : Fast 1200mV 0C Model Setup 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -1.518
+TNS   : -34.808
+
+Type  : Fast 1200mV 0C Model Setup 'PS2_CLK'
+Slack : 0.470
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.005
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'PS2_CLK'
+Slack : 0.208
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -1743.232
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PS2_CLK'
+Slack : -3.000
+TNS   : -31.520
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_comp:video|vga_clk_generator:VGA_CLOCK_25|vga_clk_cycle'
+Slack : -1.000
+TNS   : -285.000
+
+------------------------------------------------------------

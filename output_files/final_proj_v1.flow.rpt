@@ -1,0 +1,152 @@
+Flow report for final_proj_v1
+Thu Dec 14 17:18:00 2017
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Flow Summary                                                                    ;
++------------------------------------+--------------------------------------------+
+; Flow Status                        ; Successful - Thu Dec 14 17:18:00 2017      ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                      ; final_proj_v1                              ;
+; Top-level Entity Name              ; system_toplevel                            ;
+; Family                             ; Cyclone IV E                               ;
+; Device                             ; EP4CE115F29C7                              ;
+; Timing Models                      ; Final                                      ;
+; Total logic elements               ; 2,734 / 114,480 ( 2 % )                    ;
+;     Total combinational functions  ; 2,672 / 114,480 ( 2 % )                    ;
+;     Dedicated logic registers      ; 601 / 114,480 ( < 1 % )                    ;
+; Total registers                    ; 601                                        ;
+; Total pins                         ; 49 / 529 ( 9 % )                           ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 2,097,152 / 3,981,312 ( 53 % )             ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
++------------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 12/14/2017 17:14:22 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; final_proj_v1       ;
++-------------------+---------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                     ;
++--------------------------------------+---------------------------------------+---------------+----------------------+----------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name          ; Section Id     ;
++--------------------------------------+---------------------------------------+---------------+----------------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 198660151997335.151329326203708       ; --            ; --                   ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; testbench      ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                             ; --            ; --                   ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                     ; --            ; --                   ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (SystemVerilog)       ; <None>        ; --                   ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --                   ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; testbench.sv                          ; --            ; --                   ; testbench      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; testbench                             ; --            ; --                   ; testbench      ;
+; EDA_TEST_BENCH_NAME                  ; testbench                             ; --            ; --                   ; eda_simulation ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 70 ms                                 ; --            ; --                   ; testbench      ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --                   ; eda_simulation ;
+; FLOW_ENABLE_POWER_ANALYZER           ; On                                    ; Off           ; --                   ; --             ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --                   ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --                   ; --             ;
+; MISC_FILE                            ; vram_bb.v                             ; --            ; --                   ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --                   ; --             ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; dual_engine_toplevel ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; field_test_toplevel  ; Top            ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; system_toplevel      ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; dual_engine_toplevel ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; field_test_toplevel  ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; system_toplevel      ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; dual_engine_toplevel ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; field_test_toplevel  ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; system_toplevel      ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --                   ; --             ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE   ; 12.5 %                                ; 12.5%         ; --                   ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --                   ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --                   ; --             ;
+; TOP_LEVEL_ENTITY                     ; system_toplevel                       ; final_proj_v1 ; --                   ; --             ;
++--------------------------------------+---------------------------------------+---------------+----------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:34     ; 1.0                     ; 785 MB              ; 00:00:47                           ;
+; Fitter                    ; 00:01:44     ; 1.6                     ; 1484 MB             ; 00:02:08                           ;
+; Assembler                 ; 00:00:09     ; 1.0                     ; 689 MB              ; 00:00:09                           ;
+; PowerPlay Power Analyzer  ; 00:00:24     ; 1.0                     ; 858 MB              ; 00:00:22                           ;
+; TimeQuest Timing Analyzer ; 00:00:13     ; 1.3                     ; 904 MB              ; 00:00:11                           ;
+; EDA Netlist Writer        ; 00:00:10     ; 1.0                     ; 696 MB              ; 00:00:08                           ;
+; Total                     ; 00:03:14     ; --                      ; --                  ; 00:03:45                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-DAKNKVV  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-DAKNKVV  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-DAKNKVV  ; Windows 7 ; 6.2        ; x86_64         ;
+; PowerPlay Power Analyzer  ; DESKTOP-DAKNKVV  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-DAKNKVV  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-DAKNKVV  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off final_proj_v2 -c final_proj_v1
+quartus_fit --read_settings_files=off --write_settings_files=off final_proj_v2 -c final_proj_v1
+quartus_asm --read_settings_files=off --write_settings_files=off final_proj_v2 -c final_proj_v1
+quartus_pow --read_settings_files=off --write_settings_files=off final_proj_v2 -c final_proj_v1
+quartus_sta final_proj_v2 -c final_proj_v1
+quartus_eda --read_settings_files=off --write_settings_files=off final_proj_v2 -c final_proj_v1
+
+
+

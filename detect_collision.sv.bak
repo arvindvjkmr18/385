@@ -1,0 +1,137 @@
+module detect_collision(
+
+	// Input timing
+	input logic					CLOCK_50,
+	
+	// Input control
+	input logic					RUN_COLLISION,
+	//input logic					PLAYER_MOTION,	// Flag for whether player or monster is being checked.
+	input logic	[2:0]			STOP_ADDRESS,
+	
+	// Input data
+	input logic [1:0]			MOVER_ID,
+	input logic [8:0]			OLD_X,			// Moving entity old x,y coord
+	input logic [8:0]			OLD_Y,
+	input logic [8:0]			NEW_X,			// Moving entity new x,y coord
+	input logic [8:0]			NEW_Y,
+	
+	input logic [1:0]			OBJ_ID,			// Obstacle ID code
+	input logic [8:0]			OBJ_X,			// Obstacle obj x,y coord
+	input logic [8:0]			OBJ_Y,
+	
+	// Output control
+	output logic				COLLISION_DONE,// Command to position subsys FSM
+	output logic				GAME_OVER_FLAG,// Game over condition flag
+	
+	
+	// Output data
+	output logic [1:0]		ADDRESS,			// Address for reading from entity file
+	
+	output logic [1:0]		ID_CODE,			// Sprite ID code of collision-checked entity
+	output logic [8:0]		FINAL_X,			// Collision-checked x,y coord for moving entity
+	output logic [8:0]		FINAL_Y
+
+);
+	
+	// Internal wires & registers:
+	logic collision;
+	logic [2:0] obj_addr, next_obj_address;
+	logic [9:0] new_x, new_y, obj_x, obj_y;
+	int x_diff, y_diff, dx, dy;
+	
+	// Other assignments:
+	assign ID_CODE = MOVER_ID;		// ID Code passthru
+	assign ADDRESS = obj_addr;
+	
+	// Zero-extend NEW and OBJ to make compatible with signed int
+	assign new_x = {1'b0, NEW_X};
+	assign new_y = {1'b0, NEW_Y};
+	assign obj_x = {1'b0, OBJ_X};
+	assign obj_y = {1'b0, OBJ_Y};
+
+	// Iterate object address:
+	always_ff @ (posedge CLOCK_50)
+	begin
+	
+		if(RUN_COLLISION)
+			obj_addr <= next_obj_address;
+		else
+			obj_addr <= 3'b000;
+	
+	end
+	
+	assign next_obj_address = obj_addr + 3'b001;
+	
+	// End-of-routine-cycle check:
+	always_comb
+	begin
+	
+		if(obj_addr == STOP_ADDRESS)
+			COLLISION_DONE = 1'b1;
+		else if(collision)
+			COLLISION_DONE = 1'b1;
+		else
+			COLLISION_DONE = 1'b0;
+	
+	end
+	
+	// Collision detection routine:
+	always_comb
+	begin
+	
+		GAME_OVER_FLAG = 1'b0;
+	
+	
+		// Calculate mover-object delta x, delta y respective of anchor pts:
+		x_diff = new_x - obj_x;
+		y_diff = new_y - obj_y;
+		
+		if(x_diff < 0)
+			dx = 0 - x_diff;
+		else
+			dx = x_diff;
+			
+		if(y_diff < 0)
+			dy = 0 - y_diff;
+		else
+			dy = y_diff;
+		
+	
+		// Prevent erroneous player "self-collision"
+		if( (MOVER_ID == 2'b00) && (obj_addr == 3'b000) )
+			collision = 1'b0;
+		// Check background bounds:
+		else if( (NEW_X < 32) || (NEW_X > 255) || (NEW_Y < 32) || (NEW_Y > 191) )
+			collision = 1'b1;
+		// Check dx,dy between sprites
+		else if( (dx < 32) || (dy < 32) )
+		begin
+			collision = 1'b1;
+			if(OBJ_ID == 2'b01)
+				GAME_OVER_FLAG = 1'b1;
+		end
+		else
+			collision = 1'b0;
+	
+	end
+		
+	
+	// Select x,y according to collision detection:
+	always_comb
+	begin
+	
+		if(collision)
+		begin
+			FINAL_X = OLD_X;
+			FINAL_Y = OLD_Y;
+		end
+		else
+		begin
+			FINAL_X = NEW_X;
+			FINAL_Y = NEW_Y;
+		end
+	
+	end
+
+
+endmodule
